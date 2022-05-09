@@ -1,5 +1,8 @@
 const Ligas = require("../models/Ligas");
 const Equipos = require("../models/Equipos");
+const PDFDocument = require("../PDF/PDF");
+
+const fs = require("fs");
 
 function agregarLiga(req, res) {
   var datos = req.body;
@@ -73,4 +76,5 @@ function eliminarLiga(req, res) {
     }
   );
 }
+
 module.exports = { agregarLiga, misLigas, editarLiga, eliminarLiga };
