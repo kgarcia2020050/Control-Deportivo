@@ -13,16 +13,17 @@ mongoose
   .then(() => {
     console.log('Conexión exitosa.');
 
-    let puerto=env.process.PORT;
-
-    app.listen(puerto||3000, function () {
+    let puerto=process.env.PORT;
+    
+    app.listen(puerto,3000, function () {
       console.log('Conectado al puerto 3000.');
     });
   })
   .catch((error) => console.log(error));
 
-  app.get('/',function(req,res){
+  app.get('/',function (req, res) {
     return res.status(200).send("Hola mundo")
-  })
+  }
+  )
 
   inicio.Admin()
