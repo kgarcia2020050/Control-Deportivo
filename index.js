@@ -6,14 +6,16 @@ const inicio=require('./src/controllers/InicioController');
 mongoose.Promise = global.Promise;
 
 mongoose
-  .connect('mongodb://localhost:27017/Control-Deportivo', {
+  .connect('mongodb+srv://takeru:ellanomeama@cluster0.ppw9e.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => {
     console.log('Conexión exitosa.');
 
-    app.listen(3000, function () {
+    let puerto=env.process.PORT;
+
+    app.listen(puerto||3000, function () {
       console.log('Conectado al puerto 3000.');
     });
   })
