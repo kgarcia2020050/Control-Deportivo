@@ -14,16 +14,16 @@ mongoose
     console.log('Conexión exitosa.');
 
     let puerto=process.env.PORT;
-    
+
     app.listen(puerto,3000, function () {
       console.log('Conectado al puerto 3000.');
     });
   })
   .catch((error) => console.log(error));
 
-  app.get('/',function (req, res) {
-    return res.status(200).send("Hola mundo")
-  }
-  )
+
+  app.get('/',function(req,res){
+    return res.status(200).send("Hola mundo en Heroky")
+  })
 
   inicio.Admin()
