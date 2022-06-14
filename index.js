@@ -13,6 +13,7 @@ mongoose
   .then(() => {
     console.log('Conexión exitosa.');
 
+
     let puerto=process.env.PORT;
 
     app.listen(puerto,3000, function () {
@@ -22,8 +23,8 @@ mongoose
   .catch((error) => console.log(error));
 
 
-  app.get('/',function(req,res){
-    return res.status(200).send("Hola mundo en Heroky")
+  app.get("/",function(req,res){
+    return res.status(200).send("Hola mundo en Heroku.")
   })
 
   inicio.Admin()
